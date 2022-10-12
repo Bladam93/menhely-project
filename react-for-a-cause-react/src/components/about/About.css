@@ -1,0 +1,149 @@
+#about-text {
+  margin: 25px;
+  font-weight: bold;
+}
+:root {
+    --bg-color: rgb(255, 255, 255); 
+    --typewriterSpeed: 0.5s;
+    --typewriterCharacters: 24;
+  }
+  
+  .about-page body {
+    margin: 0;
+    font-family: "Source Sans Pro", sans-serif;
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    background: var(--bg-color);
+  }
+  
+  .about-page h1 {
+    margin: 20px;
+    font-size: clamp(1rem, 3vw + 1rem, 4rem);
+    position: relative;
+    font-family: "Source Code Pro", monospace;
+    position: relative;
+    width: max-content;
+  }
+  
+  .about-page  h1::before,
+  .about-page h1::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .about-page h1::before {
+    background: var(--bg-color);
+    animation: typewriter var(--typewriterSpeed)
+      steps(var(--typewriterCharacters)) 1s forwards;
+  }
+  
+  .about-page h1::after {
+    width: 0.125em;
+    background: black;
+    animation: typewriter var(--typewriterSpeed)
+        steps(var(--typewriterCharacters)) 1s forwards,
+      blink 750ms steps(var(--typewriterCharacters)) infinite;
+  }
+  
+  .about-page .about {
+    color: hsl(0 0% 0% / 0.7);
+    font-size: 2rem;
+    font-weight: 400;
+    opacity: 0;
+    transform: translateY(3rem);
+    animation: fadeInUp 2s ease calc(var(--typewriterSpeed) + 2s) forwards;
+    margin: 50px;
+  }
+  
+   @keyframes typewriter {
+    to {
+      left: 100%;
+    }
+  }
+  
+   @keyframes blink {
+    to {
+      background: transparent;
+    }
+  }
+  
+   @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+  .donate {
+    font-weight: bold;
+    font-size: larger;
+    display: inline-block;
+    margin: 20px;
+    position: relative;
+    text-decoration: none;
+    background: #b4e52e;
+    background: -webkit-linear-gradient(top, transparent 0%, rgba(254, 0, 0, 0.4) 100%), -webkit-linear-gradient(left, #b6ba57 0%, #d39905 50%, #b6ba57 100%);
+    background: linear-gradient(to bottom, transparent 0%, rgba(255, 0, 0, 0.4) 100%), linear-gradient(to right, #b6ba57 0%, #d39905 50%, #b6ba57 100%);
+    background-position: 0 0;
+    background-size: 200% 100%;
+    border-radius: 4px;
+    color: rgb(255, 255, 255);
+    padding: 15px 65px 15px 15px;
+    text-shadow: 1px 1px 5px #666;
+    -webkit-transition: all 800ms;
+    transition: all 800ms;
+  }
+  .donate:after {
+    border-left: 1px solid #b6ba57;
+    color: #f2cb69;
+    content: "\f004";
+    font: 20px "FontAwesome";
+    padding: 10px 0;
+    padding-left: 15px;
+    position: absolute;
+    right: 16px;
+    top: 7px;
+    -webkit-transition: all 600ms 200ms;
+    transition: all 600ms 200ms;
+  }
+  .donate:hover {
+    background-position: -100% 0;
+  }
+  .donate:hover:after {
+    border-left: 1px solid #eb88f0;
+    color: rgb(237, 13, 13);
+    text-shadow: 0 0 15px rgb(255, 3, 3);
+  }
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
